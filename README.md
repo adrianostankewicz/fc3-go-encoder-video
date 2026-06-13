@@ -2,18 +2,18 @@
 
 Serviço de codificação de vídeos em Go com FFmpeg e Bento4.
 
-## 📋 Sobre
+## Sobre
 
 Aplicação para processamento e codificação de arquivos de vídeo. O sistema gerencia vídeos e trabalhos de codificação em um banco de dados PostgreSQL.
 
-## 🛠️ Tech Stack
+## Tecnologias
 
 - **Go** 1.14+
 - **PostgreSQL** (produção) / **SQLite** (testes)
 - **FFmpeg** + **Bento4**
 - **GORM** (ORM)
 
-## 📁 Estrutura
+## Estrutura
 
 ```
 ├── domain/           # Modelos (Video, Job)
@@ -23,7 +23,7 @@ Aplicação para processamento e codificação de arquivos de vídeo. O sistema 
 └── docker-compose.yaml
 ```
 
-## 🚀 Quick Start
+## Como executar
 
 ### Com Docker
 
@@ -33,15 +33,7 @@ cd fc3-go-encoder-video
 docker-compose up -d
 ```
 
-### Localmente
-
-```bash
-go mod download
-go test ./...
-go build -o encoder
-```
-
-## ⚙️ Configuração
+## Configuração
 
 Edite `.env`:
 
@@ -52,18 +44,3 @@ ENV="dev"
 DEBUG=true
 AUTO_MIGRATE_DB=true
 ```
-
-## 🧪 Testes
-
-```bash
-go test ./...
-```
-
-## 📝 Modelos
-
-- **Video**: Arquivo de vídeo a ser codificado
-- **Job**: Trabalho de codificação de um vídeo
-
-## 📄 Licença
-
-MIT
